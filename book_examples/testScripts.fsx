@@ -34,9 +34,17 @@ let evens list =
    List.filter isEven list    // List.filter is a library function
                               // with two parameters: a boolean function
                               // and a list to work on
-                              
+
+let odds list = 
+   let isOdd x = x%2 > 0
+   List.filter isOdd list  
+                         
 
 evens oneToFive               // Now run the function
+
+let evenNums = evens oneToSix
+let oddNums = odds oneToSix
+printfn "evens are %A\n odds are %A" evenNums oddNums
 
 // You can use parens to clarify precedence. In this example,
 // do "map" first, with two args, then do "sum" on the result.
