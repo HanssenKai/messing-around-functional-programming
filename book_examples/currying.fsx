@@ -64,4 +64,32 @@ let addXY x y =
 let test x y z = x + y + z 
 let num = test 10 20 30
 
-            
+
+//list piping
+let res =
+    [1..10]
+    |> List.map (fun i -> i+1)
+    |> List.filter (fun i -> i>5)
+
+let compositeOp = List.map (fun i -> i+1)
+                >> List.filter (fun i -> i>5)
+let res2 = compositeOp [1..10]    
+
+
+let add1 x = 1 + x
+let add2 x = 2 + x
+
+let F x y z = x (y z) 
+let F1 x y z = y z |> x
+let F2 x y z = x <| y z
+
+let f (x:int) = float x * 3.0
+let g (x:float) = x > 3.2
+
+let h (x:int) = g(f(x))
+
+
+
+
+
+
