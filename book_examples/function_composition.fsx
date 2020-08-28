@@ -8,7 +8,7 @@ let add5Times2 x = (>>) add5 times2 x
 let add5Times2Simple = add5 >> times2
 
 add5Times2 6 |> printInt
-add5Times2 6 |> printInt
+add5Times2Simple 6 |> printInt
 
 //partial composition, multiple functions
 let add n1 n2 = n1 + n2
@@ -56,4 +56,3 @@ doCalc 100 2 4 |> printInt
                 Yes  add1 >> add2
     piping      x |> f1, pipe x as argument to y
 *)
-
