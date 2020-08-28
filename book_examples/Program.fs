@@ -2,14 +2,13 @@
 
 
 open System
-open TypeExamples 
-open somefunc
 
+
+let testFunc x = x + 20
 
 [<EntryPoint>]
 let main argv =
     printfn "Hello World from F#!"
-    let y = add1 20
-    printfn "num is %d" y
+
     0 // return an integer exit code
 
